@@ -16,7 +16,9 @@ pipeline {
 
         stage('Publish') {
             steps {
-                docker.build registry + ":$BUILD_NUMBER"
+                script {
+                    docker.build registry + ":$BUILD_NUMBER"
+                }
             }
         }
     }
