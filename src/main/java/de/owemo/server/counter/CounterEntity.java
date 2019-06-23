@@ -12,6 +12,7 @@ import javax.persistence.*;
 @NoArgsConstructor
 public class CounterEntity {
     @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private long id;
 
     @Basic
