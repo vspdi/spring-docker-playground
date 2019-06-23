@@ -10,7 +10,7 @@ pipeline {
     stages {
         stage('Build') {
             steps {
-                sh './gradlew docker'
+                sh './gradlew docker --stacktrace --debug'
             }
         }
 
